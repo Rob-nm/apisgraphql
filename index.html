@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Private Collection</h1>
+
+        <section id="book-form-section">
+            <h2 id="form-title">Registrar Nuevo Ejemplar</h2>
+            <form id="book-form">
+                <input type="hidden" id="book-id">
+                <input type="text" id="title" placeholder="Título del libro" required>
+                <input type="text" id="author" placeholder="Nombre del autor" required>
+                <button type="submit" id="submit-btn">Añadir a Galería</button>
+            </form>
+        </section>
+
+        <section id="library-section">
+            <div id="books-container">
+                </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

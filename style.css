@@ -1,0 +1,59 @@
+:root {
+    --accent: #c5a059; /* Dorado */
+    --bg: #0f172a;     /* Fondo oscuro */
+    --card: #1e293b;   /* Tarjetas */
+    --text: #f8fafc;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+
+body { background: var(--bg); color: var(--text); padding: 40px 20px; }
+
+.container { max-width: 1000px; margin: 0 auto; }
+
+h1 { text-align: center; letter-spacing: 5px; text-transform: uppercase; color: var(--accent); margin-bottom: 40px; font-weight: 300; }
+
+/* Formulario Glassmorphism */
+#book-form-section {
+    background: rgba(30, 41, 59, 0.5);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(197, 160, 89, 0.2);
+    margin-bottom: 50px;
+}
+
+#book-form { display: grid; grid-template-columns: 1fr 1fr auto; gap: 15px; }
+
+input { background: #0f172a; border: 1px solid #334155; padding: 12px; border-radius: 8px; color: white; outline: none; }
+input:focus { border-color: var(--accent); }
+
+#submit-btn { background: var(--accent); color: #0f172a; padding: 12px 20px; border-radius: 8px; font-weight: bold; border: none; cursor: pointer; transition: 0.3s; }
+#submit-btn:hover { background: #e2c27d; transform: translateY(-2px); }
+
+/* Grid de Libros */
+#books-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+
+.book-card {
+    background: var(--card);
+    padding: 25px;
+    border-radius: 12px;
+    border-bottom: 4px solid var(--accent);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.5); }
+
+.book-card h3 { color: var(--accent); margin-bottom: 5px; font-weight: 400; }
+.book-card p { color: #94a3b8; font-style: italic; margin-bottom: 20px; }
+
+/* Botones dentro de la tarjeta */
+.book-actions { display: flex; justify-content: space-between; margin-top: auto; padding-top: 15px; border-top: 1px solid #334155; }
+
+.btn-edit, .btn-delete { background: none; border: none; cursor: pointer; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; }
+.btn-edit { color: var(--accent); }
+.btn-delete { color: #f87171; }
+
+@media (max-width: 768px) { #book-form { grid-template-columns: 1fr; } }
