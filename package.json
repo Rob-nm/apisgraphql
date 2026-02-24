@@ -3,15 +3,19 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-  "start": "node app.js",
-  "dev": "nodemon app.js"
+    "start": "node server-graphql.js",
+    "dev": "nodemon app.js",
+    "start2" : "node server-graphql.js"
+    
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^5.2.1"
+    "apollo-server-express": "^3.13.0",
+    "express": "^5.2.1",
+    "graphql": "^16.13.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
